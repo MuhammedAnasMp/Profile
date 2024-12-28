@@ -1,75 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Example from './List'
+import React, { useState, useEffect } from "react";
+import Preloader from "../src/components/Pre";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer";
+import Resume from "./components/Resume/ResumeNew";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import "./style.css";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const myVar = import.meta.env.VITE_MYVAR;
-  const serviceAccountKey = import.meta.env.VITE_SERVICE_ACCOUNT_KEY;
-  console.log(import.meta.env)
-  const handleRandomCount = (type) => {
-    const randomFactor = Math.floor(Math.random() * 3) + 1; // Random increment or decrement
-    setCount((prevCount) =>
-      type === 'increment' ? prevCount + randomFactor : prevCount - randomFactor
-    );
-  };
+  const [load, upadateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <>
-      <div className="flex items-center space-x-4 p-4 funny-container">
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo funny-spin" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img
-            src={reactLogo}
-            className="logo react funny-bounce"
-            alt="React logo"
-          />
-        </a>
-        <h1 className="flex funny-heading">
-          Vite + React + <span className="funny-animate">{count}</span> 😂
-        </h1>
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<Navigate to="/"/>} />
+        </Routes>
+        <Footer />
       </div>
-      {myVar} <br />
-      {serviceAccountKey} <br />
-      <div className="card funny-card">
-        <button
-          className="funny-button"
-          onClick={() => handleRandomCount('decrement')}
-        >
-          👎 Oh no, count down! 👇
-        </button>
-        <button
-          className="funny-button"
-          onClick={() => handleRandomCount('increment')}
-        >
-          👍 Yay, count up! 👆
-        </button>
-        <p>
-          Whoa! You just edited <code>src/App.jsx</code>! 🎉 Save to see more
-          laughs.
-        </p>
-      </div>
-      <p className="read-the-docs funny-docs">
-        Click on the Vite and React logos for a wild ride!
-      </p>
-      <button
-        class="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
-        Button
-      </button>
-      <label className="swap swap-flip text-9xl">
-        {/* this hidden checkbox controls the state */}
-        <input type="checkbox" />
-
-        <div className="swap-on">😈</div>
-        <div className="swap-off">😇</div>
-        <div>anas here</div>
-        <Example />
-      </label>
-    </>
+    </Router>
   );
 }
 

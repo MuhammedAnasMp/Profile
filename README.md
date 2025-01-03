@@ -22,9 +22,9 @@ This portfolio is designed to give you a glimpse into my professional journey, t
 
 ## Quick Preview
 
-Here’s a live preview of my portfolio embedded below:
+Here’s a preview of my portfolio added below:
 
-<iframe src="https://itsanas.onrender.com" width="100%" height="500px" style="border:none;"></iframe>
+![Image Description](https://itsanas.onrender.com/image.png)
 
 ---
 

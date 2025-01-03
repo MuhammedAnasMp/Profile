@@ -1,8 +1,39 @@
-# React + Vite
+# Portfolio of Muhammed Anas MP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This website showcases my skills, projects, and experiences as a developer.
 
-Currently, two official plugins are available:
+Visit the live website here: [itsanas.onrender.com](https://itsanas.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## About the Portfolio
+
+This portfolio is designed to give you a glimpse into my professional journey, the projects I have worked on, and my technical expertise. Feel free to explore and reach out if you'd like to collaborate!
+
+---
+
+## Features
+
+- Interactive UI/UX design.
+- Showcases my technical skills and projects.
+- Provides an easy way to connect and collaborate.
+
+---
+
+## Quick Preview
+
+Here’s a live preview of my portfolio embedded below:
+
+<iframe src="https://itsanas.onrender.com" width="100%" height="500px" style="border:none;"></iframe>
+
+---
+
+## Contact Me
+
+- Email: [muhammedanasmp2001@gmail.com](mailto:muhammedanasmp2001@gmail.com)
+- LinkedIn: [Muhammed Anas MP](https://www.linkedin.com/in/muhammed-anas-mp)
+- GitHub: [MuhammedAnasMp](https://github.com/MuhammedAnasMp)
+
+---
+
+Thank you for visiting my portfolio! Feel free to reach out for collaborations, job opportunities, or just to say hello.

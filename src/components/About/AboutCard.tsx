@@ -37,7 +37,7 @@ function AboutCard() {
           <p style={{ color: "rgb(155 126 172)" }}>
             "Just like gems are found in deep waters, true innovation lies in diving deep into the tech world."{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer">- Anas -</footer>
         </blockquote>
       </Card.Body>
     </Card>
